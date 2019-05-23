@@ -1,0 +1,14 @@
+C:\Users\abubiy\source\repos\CatalogService\CatalogService\bin\Debug\netcoreapp2.2\CatalogService.deps.json
+C:\Users\abubiy\source\repos\CatalogService\CatalogService\bin\Debug\netcoreapp2.2\CatalogService.runtimeconfig.json
+C:\Users\abubiy\source\repos\CatalogService\CatalogService\bin\Debug\netcoreapp2.2\CatalogService.runtimeconfig.dev.json
+C:\Users\abubiy\source\repos\CatalogService\CatalogService\bin\Debug\netcoreapp2.2\CatalogService.dll
+C:\Users\abubiy\source\repos\CatalogService\CatalogService\obj\Debug\netcoreapp2.2\CatalogService.csprojAssemblyReference.cache
+C:\Users\abubiy\source\repos\CatalogService\CatalogService\obj\Debug\netcoreapp2.2\CatalogService.csproj.CoreCompileInputs.cache
+C:\Users\abubiy\source\repos\CatalogService\CatalogService\obj\Debug\netcoreapp2.2\CatalogService.RazorAssemblyInfo.cache
+C:\Users\abubiy\source\repos\CatalogService\CatalogService\obj\Debug\netcoreapp2.2\CatalogService.RazorAssemblyInfo.cs
+C:\Users\abubiy\source\repos\CatalogService\CatalogService\obj\Debug\netcoreapp2.2\CatalogService.AssemblyInfoInputs.cache
+C:\Users\abubiy\source\repos\CatalogService\CatalogService\obj\Debug\netcoreapp2.2\CatalogService.AssemblyInfo.cs
+C:\Users\abubiy\source\repos\CatalogService\CatalogService\obj\Debug\netcoreapp2.2\CatalogService.RazorTargetAssemblyInfo.cache
+C:\Users\abubiy\source\repos\CatalogService\CatalogService\bin\Debug\netcoreapp2.2\CatalogService.pdb
+C:\Users\abubiy\source\repos\CatalogService\CatalogService\obj\Debug\netcoreapp2.2\CatalogService.dll
+C:\Users\abubiy\source\repos\CatalogService\CatalogService\obj\Debug\netcoreapp2.2\CatalogService.pdb
