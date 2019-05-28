@@ -21,7 +21,7 @@ namespace CatalogService.Controllers
         
 
         // GET: api/Book/5
-        /*[HttpGet("{id}")]
+        [HttpGet("{id}")]
         public async Task<ActionResult<Book>> GetBook(int id)
         {
             var book = await _context.Book.FindAsync(id);
@@ -103,7 +103,7 @@ namespace CatalogService.Controllers
 
             return book;
         }
-        */
+        
         private bool BookExists(int id)
         {
             return _context.Book.Any(e => e.Isbn == id);
