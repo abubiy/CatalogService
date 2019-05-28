@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CatalogService.Models
 {
-    [Table("Books")]
+    [Table("Books")]        //mapping of database table to class 
     public partial class Book
     {
         public string Author { get; set; }
