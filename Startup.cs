@@ -1,4 +1,4 @@
-﻿using CatalogService.Models;
+using CatalogService.Models;
 using Microsoft.AspNet.OData.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -26,21 +26,22 @@ namespace CatalogService
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddOData();
-            services.AddTransient<BookModelBuilder>();
+            services.AddTransient<BookModelBuilder>();                             //transient service provides a new instance every time a service instance is requested
             services.AddDbContext<LibraryContext>(options =>
-               options.UseSqlServer(Configuration.GetConnectionString("DBReportingContext")));
+               options.UseSqlServer(Configuration.GetConnectionString("DBReportingContext")));      //connection string can be found in appsettings.json
             
-
+            
             services.AddMvc(options =>
             {
-                options.EnableEndpointRouting = false;
+                options.EnableEndpointRouting = false;                          
             }).SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
-             .AddJsonOptions(opt =>
+             .AddJsonOptions(opt =>                                             //configuring JSON in MVC
              {
                  opt.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
                  opt.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
              });
-
+            
+            // Register the Swagger generator, defining 1 or more Swagger documents
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new Info { Title = "My API", Version = "v1" });
@@ -64,7 +65,7 @@ namespace CatalogService
             app.UseHttpsRedirection();
             app.UseMvc(routeBuilder =>
             {
-                routeBuilder.MapODataServiceRoute("ODataRoutes", "odata",
+                routeBuilder.MapODataServiceRoute("ODataRoutes", "odata",       //OData routing, should match launchUrl in launchSettings.json
                 BookModelBuilder.GetEdmModel(app.ApplicationServices));
                 routeBuilder.EnableDependencyInjection();
             });
@@ -75,8 +76,8 @@ namespace CatalogService
             // Enable middleware to serve swagger-ui assets (HTML, JS, CSS etc.)
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
-                c.RoutePrefix = string.Empty;
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");         
+                c.RoutePrefix = string.Empty;                                   //serve the swagger UI at the app's root 
             });
 
         }
